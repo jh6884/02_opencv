@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-
+'''
 img = cv2.imread('../img/like_lenna.png')
 
 x=320; y=150; w=50; h=50
@@ -15,10 +15,9 @@ cv2.imshow("roi", img2)     # roi 만 따로 출력
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
 '''
-import cv2 # 관심 영역 표시
-import numpy as np
+
+# 관심 영역 표시
 
 isDragging = False                      # 마우스 드래그 상태 저장 
 x0, y0, w, h = -1,-1,-1,-1              # 영역 선택 좌표 저장
@@ -60,4 +59,3 @@ cv2.imshow('img', img)
 cv2.setMouseCallback('img', onMouse) # 마우스 이벤트 등록 ---⑧
 cv2.waitKey()
 cv2.destroyAllWindows()
-'''
