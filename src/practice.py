@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pylab as plt
 
-img1 = cv2.imread('../img/minhabaek_unsplash.jpg')
+img1 = cv2.imread('../img/kabo_unsplash.jpg')
 img2 = cv2.imread('../img/mehrnaz_unsplash.jpg')
 
 height1, width1 = img1.shape[:2]
@@ -13,7 +13,7 @@ w = x + width1
 h = y + height1
 
 chromakey = img1[:10, :10, :]
-offset = 20
+offset = 1.5
 
 hsv_chroma = cv2.cvtColor(chromakey, cv2.COLOR_BGR2HSV)
 hsv_img = cv2.cvtColor(img1, cv2.COLOR_BGR2HSV)
@@ -32,5 +32,5 @@ img2[y:h, x:w] = fg + bg
 
 cv2.imshow('chromakey', img1)
 cv2.imshow('added', img2)
-cv2.waitKey()
+cv2.waitKey(0)
 cv2.destroyAllWindows()
